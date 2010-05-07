@@ -12,6 +12,7 @@
 
 		<!-- Ext JS -->
 		<link rel="stylesheet" type="text/css" href="http://extjs.cachefly.net/ext-3.2.0/resources/css/ext-all.css" />
+		<link rel="stylesheet" type="text/css" href="http://extjs.cachefly.net/ext-3.2.0/resources/css/xtheme-gray.css" />
 		<!-- /Ext JS -->
 
 		<!-- Ext JS -->
@@ -21,7 +22,7 @@
 		<!-- /Ext JS -->
 
 		<!-- App -->
-		<script type="text/javascript" src="../../src/.js" charset="utf-8"></script>
+		<script type="text/javascript" src="../../src/Panel/TreePanel1.js" charset="utf-8"></script>
 		<!-- /App -->
 	</head>
 	<!-- /head -->
