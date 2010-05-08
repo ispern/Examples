@@ -1,5 +1,6 @@
 Ext.onReady( function() {
 	Ext.BLANK_IMAGE_URL = 'http://extjs.cachefly.net/ext-3.2.0/resources/images/default/s.gif';
+	Ext.Ajax.method = 'GET';
 	Ext.QuickTips.init();
 
 	// rootのツリーノードを生成
@@ -18,7 +19,7 @@ Ext.onReady( function() {
 		rootVisible: false,			// rootのツリーノードを表示するか
 		root: root,					// rootのツリーノードを指定
 		loader: new Ext.tree.TreeLoader({
-			url: '../../data/TreePanel.json'	/* 取得元URLを指定 */
+			url: '../../data/TreePanel.json'	// 取得元URLを指定
 		})
 	});
 });
