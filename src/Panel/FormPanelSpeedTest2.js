@@ -6,7 +6,7 @@ Ext.onReady(function() {
 
 	var form = new Ext.Panel({
 		renderTo: Ext.getBody(),
-		title: 'FormPanel - Examples -',
+		title: 'FormPanel - Speed Test2 -',
 		layout: 'form',
 		width: 800,
 		height: 600,
