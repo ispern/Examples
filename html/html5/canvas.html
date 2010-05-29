@@ -4,37 +4,116 @@
 		<meta charset="utf-8">
 		<title>canvas Sample</title>
 		<script>
-			function stroke() {
+			function paintLine() {
+				// キャンバスのエレメントとコンテキストを取得
 				var canvas = document.getElementById('canvas1');
-				var context = canvas.getContext('2d');
+				var ct = canvas.getContext('2d');
 
 				// 四角形の描画
-				context.fillRect(0, 0, 150, 100);
+				ct.fillRect(0, 0, 250, 200);
 
 				// テキストの描画
-				context.fillText('Hello Canvas!!', 155, 110);
+				ct.fillText('Hello Canvas!!', 255, 210);
 
-				// 線の描画を開始
-				context.beginPath();
+				// 描画を開始
+				ct.beginPath();
 
 				// 線の描画
-				context.moveTo(0, 100);
-				context.lineTo(300, 100);
-				context.moveTo(150, 0);
-				context.lineTo(150, 200);
+				ct.moveTo(0, 200);
+				ct.lineTo(500, 200);
+				ct.moveTo(250, 0);
+				ct.lineTo(250, 400);
 
 				// キャンパスの枠線を描画
-				context.rect(0, 0, 300, 200);
+				ct.rect(0, 0, 500, 400);
 
 				// 画面への書き出し
-				context.stroke();
+				ct.stroke();
 
-				// 線の描画を終了
-				context.closePaath();
+				// 描画を終了
+				ct.closePath();
+			}
+
+			function paintCircle() {
+				// キャンバスのエレメントとコンテキストを取得
+				var canvas = document.getElementById('canvas1');
+				var ct = canvas.getContext('2d');
+
+				// 描画を開始
+				ct.beginPath();
+
+				// 円の描画
+				ct.arc(120, 300, 70, 0, 2*Math.PI, true);
+
+				// 画面への書き出し
+				ct.stroke();
+
+				// 描画を終了
+				ct.closePath();
+			}
+
+			function paintColorCircle() {
+				// キャンバスのエレメントとコンテキストを取得
+				var canvas = document.getElementById('canvas1');
+				var ct = canvas.getContext('2d');
+
+				// 透明度を指定
+				ct.globalAlpha = 0.7;
+
+				// 描画を開始
+				ct.beginPath()
+
+				// 円の描画
+				ct.fillStyle = 'rgb(68, 142, 238)';
+				ct.arc(400, 300, 70, 0, 2*Math.PI, true);
+				ct.fill();
+
+				// 画面への書き出し
+				ct.stroke();
+
+				// 描画を終了
+				ct.closePath();
+			}
+
+			function loadImage() {
+				// キャンバスのエレメントとコンテキストを取得
+				var canvas = document.getElementById('canvas2');
+				var ct = canvas.getContext('2d');
+
+				// imageの生成
+				var image = new Image();
+				image.src = "../../images/MyProfilePicture.jpg?" + new Date().getTime();
+
+				// imageのロードが完了したら描画
+				image.onload = function() {
+					ct.drawImage(image, 0, 0);
+				}
+			}
+
+			function copyImage() {
+				// キャンバスのエレメントとコンテキストを取得
+				var canvas2 = document.getElementById('canvas2');
+				var canvas3 = document.getElementById('canvas3');
+				var ct2 = canvas2.getContext('2d');
+				var ct3 = canvas3.getContext('2d');
+
+				var img = ct2.getImageData(0, 0, 500, 400);
+				ct3.putImageData(img, 0, 0);
 			}
 		</script>
 </head>
-<body onload="stroke();">
-	<canvas id="canvas1" width="500" height="400"></canvas>
+<body>
+	<button onclick="paintLine();">線を描画</button>
+	<button onclick="paintCircle()">円を描画</button>
+	<button onclick="paintColorCircle()">色つきの円を描画</button>
+	<button onclick="loadImage()">画像を描画</button>
+	<button onclick="copyImage()">画像をコピー</button>
+	<div>
+		<canvas id="canvas1" width="500" height="400"></canvas>
+	</div>
+	<div>
+		<canvas id="canvas2" width="500" height="400"></canvas>
+		<canvas id="canvas3" width="500" height="400"></canvas>
+	</div>
 </body>
 </html>
