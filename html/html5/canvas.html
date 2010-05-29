@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>canvas Sample</title>
+		<script>
+			function stroke() {
+				var canvas = document.getElementById('canvas1');
+				var context = canvas.getContext('2d');
+
+				// 四角形の描画
+				context.fillRect(0, 0, 150, 100);
+
+				// テキストの描画
+				context.fillText('Hello Canvas!!', 155, 110);
+
+				// 線の描画を開始
+				context.beginPath();
+
+				// 線の描画
+				context.moveTo(0, 100);
+				context.lineTo(300, 100);
+				context.moveTo(150, 0);
+				context.lineTo(150, 200);
+
+				// キャンパスの枠線を描画
+				context.rect(0, 0, 300, 200);
+
+				// 画面への書き出し
+				context.stroke();
+
+				// 線の描画を終了
+				context.closePaath();
+			}
+		</script>
+</head>
+<body onload="stroke();">
+	<canvas id="canvas1" width="500" height="400"></canvas>
+</body>
+</html>
