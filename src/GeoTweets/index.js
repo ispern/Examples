@@ -31,7 +31,7 @@ Ext.setup({
 		});
 
 		var map = new Ext.Map({
-			title: 'ご近所ツイート',
+			title: 'Map',
 			getLocation: true,
 			mapOptions: {
 				zoom: 12
@@ -51,8 +51,8 @@ Ext.setup({
 				url: 'http://search.twitter.com/search.json',
 				callbackKey: 'callback',
 				params: {
-					geocode: coords.latitude + ',' + coords.longitude + ',' + '5mi',
-					rpp: 30
+					geocode: coords.latitude + ',' + coords.longitude + ',' + '25km',
+					rpp: 200
 				},
 				callback: function(data) {
 					data = data.results;
@@ -62,6 +62,7 @@ Ext.setup({
 						var tweet = data[i];
 						if (tweet.geo && tweet.geo.coordinates) {
 							var position = new google.maps.LatLng(tweet.geo.coordinates[0], tweet.geo.coordinates[1]);
+							console.log(position);
 							addMarker(tweet, position);
 						}
 					}
@@ -76,10 +77,10 @@ Ext.setup({
 			});
 
 			var tpl = new Ext.XTemplate(
-					'<div class="abater">',
+					'<div>',
 						'<img src="{profile_image_url}">',
 					'</div>',
-					'<div class="tweet-content">',
+					'<div>',
 						'<h2>{from_user}</h2>',
 						'<p>{text}</p>',
 					'</div>'
