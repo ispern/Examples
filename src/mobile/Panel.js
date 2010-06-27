@@ -11,8 +11,11 @@ Ext.setup({
 	// iPhoneからアクセスした場合のスプラッシュ画像
 	phoneStartupScreen: 'phone_startup.png',
 
-	// アイコンを自動処理させない
+	// アイコンの光沢効果を無効
 	glossOnIcon: false,
+
+	// ステータスバーを半透明表示
+	statusBarStyle: 'black-translucent',
 
 	// onReady
 	onReady: function() {
