@@ -93,19 +93,34 @@ input, textarea {
 
 .x-scrollbar {
   position: absolute;
-  top: 0;
   z-index: 10;
   -webkit-transition-property: -webkit-transform, opacity;
-  -webkit-border-radius: 2px;
-  background-color: rgba(0, 0, 0, .6);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  -webkit-border-radius: 4px;
   opacity: 0;
 }
 
+.x-scrollbar-dark {
+  background-color: rgba(0, 0, 0, .6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.x-scrollbar-light {
+  background-color: rgba(255, 255, 255, .6);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
 .x-scrollbar-vertical {
-    right: 4px; /* Should be dynamic */
-    width: 4px;    
-    -webkit-transform: translate3d(0px, 4px, 0px);
+  top: 0;
+  right: 4px;
+  width: 4px;    
+  -webkit-transform: translate3d(0px, 4px, 0px);
+}
+
+.x-scrollbar-horizontal {
+  left: 0;
+  bottom: 4px;
+  height: 4px;    
+  -webkit-transform: translate3d(4px, 0px, 0px);
 }
 
 .x-mask {

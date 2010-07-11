@@ -1,0 +1,20 @@
+@import 'compass/css3';
+
+$base_color: #4A36FF;
+$box_size: 100px;
+
+body {
+    font-family: Hevetica;
+    margin: 50px;
+}
+
+.box {
+    margin: $box_size/4;
+    display: block;
+    @include border-radius($box_size/4);
+    @include linear-gradient(color-stops(lighten($base_color, 25%), lighten($base_color, 15%) 5%, $base_color), bottom);
+    height: $box_size;
+    width: $box_size;
+    @include box-shadow(#808080, 1px, 1px, 10px);
+
+}

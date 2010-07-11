@@ -1,0 +1,38 @@
+@import 'compass/css3';
+
+@mixin buttonsize($base_color: #5291C5, $button_size: 2em) {
+    -webkit-box-sizing: border-box;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    line-height: $button_size;
+    padding: 0 $button_size/2;
+    height: $button_size;
+    border: 1px solid darken($base_color, 20%);
+    text-shadow: darken($base_color, 10%) 0 -1px 0;
+    @include border-radius($button_size/2);
+    @include linear-gradient(color-stops(lighten($base_color, 30%), lighten($base_color, 15%) 4%, $base_color));
+    @include box-shadow(#808080, 0px, 0px, 20px);
+
+    &:active {
+        @include linear-gradient(color-stops(darken($base_color, 30%), darken($base_color, 15%) 4%, darken($base_color, 7%)));
+    }
+}
+
+body {
+    font-family: Hevetica;
+    margin: 50px;
+}
+
+.button {
+    @include buttonsize();
+}
+
+.green_button {
+    @include buttonsize(#00FF1A);
+}
+
+.big_green_button {
+    @extend .green_button;
+    font-size: 2em;
+}

@@ -115,8 +115,8 @@ $tab_icon_size: 2.1em;
             text-shadow: #000 0 1px 0px;
 
             @if $include_icons == true {
-              &.bookmarks {
-                -webkit-mask-box-image: inline_image("tabicons/bookmarks.png");
+              &.chat {
+                -webkit-mask-box-image: inline_image("tabicons/chat.png");
               }
               &.download {
                 -webkit-mask-box-image: inline_image("tabicons/download.png");
@@ -124,14 +124,27 @@ $tab_icon_size: 2.1em;
               &.favorites {
                  -webkit-mask-box-image: inline_image("tabicons/favorites.png");
               }
+              &.home {
+                -webkit-mask-box-image: inline_image("tabicons/home.png");
+              }
               &.info {
                 -webkit-mask-box-image: inline_image("tabicons/info.png");
+              }
+              &.mail {
+                -webkit-mask-box-image: inline_image("tabicons/mail.png");
               }
       /*        &.recent {
                 -webkit-mask-box-image: inline_image("tabicons/recent.png");
               }*/
+
               &.more {
                 -webkit-mask-box-image: inline_image("tabicons/more.png");
+              }
+              &.mail {
+                -webkit-mask-box-image: inline_image("tabicons/mail.png");
+              }
+              &.refresh {
+                -webkit-mask-box-image: inline_image("tabicons/refresh.png");
               }
               &.search {
                 -webkit-mask-box-image: inline_image("tabicons/search.png");
@@ -147,6 +160,9 @@ $tab_icon_size: 2.1em;
               }
               &.settings {
                 -webkit-mask-box-image: inline_image("tabicons/settings.png");
+              }
+              &.maps {
+                -webkit-mask-box-image: inline_image("toolbaricons/maps.png");
               }
             }
           }

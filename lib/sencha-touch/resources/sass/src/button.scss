@@ -225,13 +225,13 @@ $tb_button_height: 1.9em;
             -webkit-mask-box-image: inline_image("toolbaricons/compose.png");
           }
           &.delete {
-            -webkit-mask-box-image: inline_image("toolbaricons/action.png");
+            -webkit-mask-box-image: inline_image("toolbaricons/delete.png");
           }
           &.home {
-            -webkit-mask-box-image: inline_image("toolbaricons/add.png");
+            -webkit-mask-box-image: inline_image("toolbaricons/home.png");
           }
           &.locate {
-            -webkit-mask-box-image: inline_image("toolbaricons/attachment.png");
+            -webkit-mask-box-image: inline_image("toolbaricons/locate.png");
           }
           &.bolt {
             -webkit-mask-box-image: inline_image("toolbaricons/bolt.png");
