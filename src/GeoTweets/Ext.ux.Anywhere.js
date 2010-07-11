@@ -7,7 +7,7 @@ Ext.ux.Anywhere = function() {
 		init: function(opt) {
 			twttr.anywhere(function(t) {
 				tw = t;
-				twttr.anywhere.config({ callbackURL: 'http://192.168.77.102/~Examples/html/GeoTweets/index.html' });
+				// twttr.anywhere.config({ callbackURL: 'http://192.168.77.102/~Examples/html/GeoTweets/index.html' });
 
 				tw.bind('authComplete', function(e, user) {
 					if(opt.connectedCallback && Ext.isFunction(opt.connectedCallback)){
