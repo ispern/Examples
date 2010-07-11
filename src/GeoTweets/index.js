@@ -2,7 +2,9 @@ Ext.setup({
 
 	fullscreen: true,
 
-	icon: 'icon.png',
+	tabletIcon: 'icon_tablet.png',
+
+	phoneIcon: 'icon_phone.png',
 
 	tabletStartupScreen: 'tablet_startup.png',
 
