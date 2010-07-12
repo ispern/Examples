@@ -21,15 +21,31 @@ Ext.setup({
 	onReady: function() {
 		new Ext.TabPanel({
 			fullscreen: true,
+
+			// TabBarの設定
 			tabBar: {
+
+				// タブを上部に配置
 				dock: 'top',
+
+				// スタイル設定
+				ui: 'dark',
+
 				layout: {
+
+					// タブを中央寄せ
 					pack: 'center'
 				}
 			},
-			ui: 'dark',
+
+
+			// Tab切り替えのアニメーション
 			animation: 'slide',
+
+			// 各Panelのデフォルト値設定
 			defaults: {
+
+				// スクロールを縦スクロール
 				scroll: 'vertical'
 			},
 			items: [{

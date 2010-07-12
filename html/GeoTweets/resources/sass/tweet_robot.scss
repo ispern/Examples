@@ -1,0 +1,85 @@
+$active_color: #7E9934;
+$base_height: 100px;
+$content_bgcolor: #FFF;
+
+@import  'compass/css3';
+@import '../../../../lib/sencha-touch/resources/sass/robot';
+
+@mixin contents($font_size: 20px) {
+    margin-top: 20px;
+    text-align: center;
+    font-size: $font_size;
+    font-weight: bold;
+}
+
+body {
+    background-color: #A7BFC7;
+}
+
+.x-tabbar {
+    padding-top: 10px !important;
+    border-bottom: 2px solid #306aa1 !important;
+}
+
+.tweet {
+    margin: 10px 15px 10px 10px;
+    padding-left: 70px;
+    min-height: $base_height;
+    position: relative;
+
+    .tweet-anchor {
+        width: 14px;
+        height: 14px;
+        z-index: 0;
+        position: absolute;
+        top: 12px;
+        left: 64px;
+        @include rotate();
+        background-color: $content_bgcolor;
+    }
+
+    > img {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 48px;
+        height: 48px;
+        padding: 2px;
+        @include border-radius(3px);
+    }
+
+    .tweet-content {
+        overflow: hidden;
+        padding: 10px 20px 10px 10px;
+        @include border-radius(5px);
+        min-height: ($base_height - 10);
+        background-color: $content_bgcolor;
+        z-index: 2;
+
+        h2 {
+            margin-bottom: 2px;
+            color: #4d4d4d;
+            font-weight: bold;
+        }
+
+        p {
+            color: #666;
+        }
+    }
+}
+
+.x-phone {
+    font-size: 14px;
+}
+
+.no-tweet {
+    @include contents(30px);
+}
+
+.startup-window-tablet {
+    @include contents(20px);
+}
+
+.startup-window-phone {
+    @include contents(17px);
+}
