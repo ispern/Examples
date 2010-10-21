@@ -20,17 +20,24 @@ Ext.onReady(function() {
 		[14, 'Mac OS X v10.6', 'Snow Leopard']
 	];
 
+    var jsonData = {
+        results: 14,
+        data: data
+    };
+
 	// データストア
-	var store = new Ext.data.SimpleStore({
+	var store = new Ext.data.ArrayStore({
+        idProperty: 'id',
+        totalProperty: 'results',
+        root: 'data',
+        autoLoad: true,
 		fields: [
 			{name: 'id', type: 'string'},
 			{name: 'name', type: 'string'},
 			{name: 'description', type: 'string'}
-		]
+		],
+        proxy: new Ext.data.MemoryProxy(jsonData)
 	});
-
-	// データ読み込み
-	store.loadData(data);
 
 	// カラム定義
 	var cm = new Ext.grid.ColumnModel({
@@ -58,6 +65,7 @@ Ext.onReady(function() {
 		},
 		bbar: new Ext.PagingToolbar({
 			store: store,
+            pageSize: 20,
 			displayInfo: true
 		})
 	});
