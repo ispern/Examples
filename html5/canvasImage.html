@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>canvas Sample</title>
+		<script>
+			function loadImage() {
+				// キャンバスのエレメントとコンテキストを取得
+				var canvas = document.getElementById('canvas1');
+				var ct = canvas.getContext('2d');
+
+				// imageの生成
+				var image = new Image();
+				image.src = "MyProfilePicture.jpg?" + new Date().getTime();
+
+				// imageのロードが完了したら描画
+				image.onload = function() {
+					ct.drawImage(image, 0, 0, 230, 200);
+				}
+			}
+
+			function copyImage() {
+				// キャンバスのエレメントとコンテキストを取得
+				var canvas1 = document.getElementById('canvas1');
+				var canvas2 = document.getElementById('canvas2');
+				var ct1 = canvas1.getContext('2d');
+				var ct2 = canvas2.getContext('2d');
+
+				// 画像データを取得
+				var img = ct1.getImageData(0, 0, 230, 200);
+
+				// 取得した画像データを入れる
+				ct2.putImageData(img, 0, 0);
+			}
+
+			function alpha() {
+				// キャンバスのエレメントとコンテキストを取得
+				var canvas1 = document.getElementById('canvas1');
+				var canvas3 = document.getElementById('canvas3');
+				var ct1 = canvas1.getContext('2d');
+				var ct3 = canvas3.getContext('2d');
+
+				// 画像データを取得
+				var img = ct1.getImageData(0, 0, 230, 200);
+				for (var i=0; i<img.data.length; i++) {
+					if (i%4 == 3) {
+						// 透明度を設定
+						img.data[i] = 255 * 0.5;
+					}
+				}
+
+				// 取得した画像データを入れる
+				ct3.putImageData(img, 0, 0);
+			}
+		</script>
+</head>
+<body>
+	<button onclick="loadImage()">画像を描画</button>
+	<button onclick="copyImage()">画像をコピー</button>
+	<button onclick="alpha()">透過</button>
+	<div>
+		<canvas id="canvas1" width="230" height="200" style="border: 1px solid black;"></canvas>
+		<canvas id="canvas2" width="230" height="200" style="border: 1px solid black;"></canvas>
+		<canvas id="canvas3" width="230" height="200" style="border: 1px solid black;"></canvas>
+	</div>
+</body>
+</html>
