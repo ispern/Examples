@@ -1,0 +1,26 @@
+@mixin card {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    padding: 100px;
+}
+
+.card1 {
+    @include card;
+    @include background-gradient(#BF3030, 'bevel');
+}
+
+.card2 {
+    @include card;
+    @include background-gradient(#1D7373, 'matte');
+}
+
+.card3 {
+    @include card;
+    @include background-gradient(#86B32D, 'glossy');
+}
+
+.card4 {
+    @include card;
+    @include background-gradient(#86B32D, 'recessed');
+}
