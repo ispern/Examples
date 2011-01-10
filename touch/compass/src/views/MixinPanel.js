@@ -10,18 +10,65 @@ App.MixinPanel = Ext.extend(Ext.Carousel, {
 
             activeItem: 0,
 
+            defaults: {
+                layout: {
+                    type: 'vbox',
+                    align: 'stretch'
+                },
+                defaults: {
+                    flex: 1
+                }
+            },
+
             items: [{
+                dockedItems: [{
+                    dock: 'top',
+                    title: 'My Toolbar',
+                    xtype: 'toolbar',
+                    cls: 'card1-toolbar',
+                    items: [{
+                        text: 'back',
+                        ui: 'back'
+                    },{
+                        text: 'forward',
+                        ui: 'forward'
+                    }]
+                }],
+                layout: 'fit',
                 html: 'bevel',
                 cls: 'card1'
             },{
-                html: 'matte',
-                cls: 'card2'
+                items: [{
+                    html: '影なし',
+                    cls: 'card2'
+                },{
+                    html: '白の影あり',
+                    cls: 'card2-light'
+                }]
             },{
-                html: 'glossy',
-                cls: 'card3'
+                items: [{
+                    html: '影なし',
+                    cls: 'card3'
+                },{
+                    html: '黒の影あり',
+                    cls: 'card3-shadow'
+                }]
             },{
-                html: 'recessed',
-                cls: 'card4'
+                items: [{
+                    html: '背景色の明度が50以下',
+                    cls: 'card4-light'
+                },{
+                    html: '背景色の明度が50以上',
+                    cls: 'card4-dark'
+                }]
+            },{
+                items: [{
+                    html: '背景色の明度が50以下',
+                    cls: 'card5-light'
+                },{
+                    html: '背景色の明度が50以上',
+                    cls: 'card5-shadow'
+                }]
             }]
         });
         

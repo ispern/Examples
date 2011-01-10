@@ -1,26 +1,64 @@
 @mixin card {
     font-size: 48px;
-    font-weight: bold;
     text-align: center;
     padding: 100px;
 }
 
 .card1 {
-    @include card;
-    @include background-gradient(#BF3030, 'bevel');
+    @include background-gradient(#abd558, 'bevel');
+
+    .x-panel-body {
+        @include card;
+    }
+}
+
+.card1-toolbar {
+    @include toolbar-button(#abd558);
 }
 
 .card2 {
     @include card;
-    @include background-gradient(#1D7373, 'matte');
+    background-color: #abd558;
+}
+
+.card2-light {
+    @extend .card2;
+    border-top: 1px solid black;
+    @include bevel-text('light');
 }
 
 .card3 {
     @include card;
-    @include background-gradient(#86B32D, 'glossy');
+    color: #b0b0b0;
+    background-color: #fff;
 }
 
-.card4 {
+.card3-shadow {
+    @extend .card3;
+    border-top: 1px solid black;
+    @include bevel-text('shadow');
+}
+
+.card4-light {
     @include card;
-    @include background-gradient(#86B32D, 'recessed');
+    background-color: #53751D;
+    @include color-by-background(#53751D, 25%);
+}
+
+.card4-dark {
+    @include card;
+    background-color: #99d041;
+    @include color-by-background(#99d041, 25%);
+}
+
+.card5-light {
+    @include card;
+    background-color: #53751D;
+    @include bevel-by-background(#53751D);
+}
+
+.card5-shadow {
+    @include card;
+    background-color: #99d041;
+    @include bevel-by-background(#99d041);
 }

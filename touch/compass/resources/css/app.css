@@ -2517,46 +2517,115 @@ div.x-sheet.x-msgbox .x-toolbar.x-docked-bottom {
   border: 0.1em solid rgba(66, 99, 138, 0.9);
 }
 
-/* line 8, ../src/widgets/_mixin.scss */
+/* line 7, ../src/widgets/_mixin.scss */
 .card1 {
+  background-color: #abd558;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #e8f4d2), color-stop(2%, #cae495), color-stop(30%, #bbdd79), color-stop(65%, #abd558), color-stop(100%, #96c832));
+  background-image: linear-gradient(top, #e8f4d2 0%, #cae495 2%, #bbdd79 30%, #abd558 65%, #96c832 100%);
+}
+/* line 10, ../src/widgets/_mixin.scss */
+.card1 .x-panel-body {
   font-size: 48px;
-  font-weight: bold;
   text-align: center;
   padding: 100px;
-  background-color: #bf3030;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #e7a1a1), color-stop(2%, #d86464), color-stop(30%, #d14747), color-stop(65%, #bf3030), color-stop(100%, #962626));
-  background-image: linear-gradient(top, #e7a1a1 0%, #d86464 2%, #d14747 30%, #bf3030 65%, #962626 100%);
 }
 
-/* line 13, ../src/widgets/_mixin.scss */
-.card2 {
-  font-size: 48px;
-  font-weight: bold;
-  text-align: center;
-  padding: 100px;
-  background-color: #1d7373;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #55d4d4), color-stop(2%, #279c9c), color-stop(100%, #165656));
-  background-image: linear-gradient(top, #55d4d4 0%, #279c9c 2%, #165656 100%);
+/* line 29, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/_mixins.scss */
+.card1-toolbar, .x-toolbar .card1-toolbar {
+  border: 0.1em solid #779f28;
+  border-top-color: #86b32d;
+  color: black;
+  text-shadow: rgba(255, 255, 255, 0.25) 0 0.08em 0;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 0.1em 0;
+}
+/* line 34, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/_mixins.scss */
+.card1-toolbar.x-button-back:before, .card1-toolbar.x-button-forward:before, .x-toolbar .card1-toolbar.x-button-back:before, .x-toolbar .card1-toolbar.x-button-forward:before {
+  background: #779f28;
+}
+/* line 38, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/_mixins.scss */
+.card1-toolbar, .card1-toolbar.x-button-back:after, .card1-toolbar.x-button-forward:after, .x-toolbar .card1-toolbar, .x-toolbar .card1-toolbar.x-button-back:after, .x-toolbar .card1-toolbar.x-button-forward:after {
+  background-color: #abd558;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #e8f4d2), color-stop(2%, #bfdf81), color-stop(100%, #9dce3b));
+  background-image: linear-gradient(top, #e8f4d2 0%, #bfdf81 2%, #9dce3b 100%);
+}
+/* line 42, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/_mixins.scss */
+.card1-toolbar img.x-icon-mask, .x-toolbar .card1-toolbar img.x-icon-mask {
+  background-color: black;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #5c7a1f), color-stop(2%, #1f290a), color-stop(100%, #000000));
+  background-image: linear-gradient(top, #5c7a1f 0%, #1f290a 2%, #000000 100%);
+}
+/* line 51, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/_mixins.scss */
+.card1-toolbar.x-button-pressed, .card1-toolbar.x-button-active, .x-toolbar .card1-toolbar.x-button-pressed, .x-toolbar .card1-toolbar.x-button-active {
+  -webkit-box-shadow: inset #88b928 0 0 0.1em, rgba(255, 255, 255, 0.1) 0 0.1em 0;
+}
+/* line 52, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/_mixins.scss */
+.card1-toolbar.x-button-pressed, .card1-toolbar.x-button-pressed:after, .card1-toolbar.x-button-active, .card1-toolbar.x-button-active:after, .x-toolbar .card1-toolbar.x-button-pressed, .x-toolbar .card1-toolbar.x-button-pressed:after, .x-toolbar .card1-toolbar.x-button-active, .x-toolbar .card1-toolbar.x-button-active:after {
+  background-color: #9dce3b;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #80ab2b), color-stop(10%, #8fc030), color-stop(65%, #9dce3b), color-stop(100%, #9ece3e));
+  background-image: linear-gradient(top, #80ab2b 0%, #8fc030 10%, #9dce3b 65%, #9ece3e 100%);
 }
 
-/* line 18, ../src/widgets/_mixin.scss */
-.card3 {
+/* line 19, ../src/widgets/_mixin.scss */
+.card2, .card2-light {
   font-size: 48px;
-  font-weight: bold;
   text-align: center;
   padding: 100px;
-  background-color: #86b32d;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #abd558), color-stop(50%, #95c732), color-stop(51%, #86b32d), color-stop(100%, #779f28));
-  background-image: linear-gradient(top, #abd558 0%, #95c732 50%, #86b32d 51%, #779f28 100%);
+  background-color: #abd558;
 }
 
-/* line 23, ../src/widgets/_mixin.scss */
-.card4 {
+/* line 24, ../src/widgets/_mixin.scss */
+.card2-light {
+  border-top: 1px solid black;
+  text-shadow: rgba(255, 255, 255, 0.25) 0 0.08em 0;
+}
+
+/* line 30, ../src/widgets/_mixin.scss */
+.card3, .card3-shadow {
   font-size: 48px;
-  font-weight: bold;
   text-align: center;
   padding: 100px;
-  background-color: #86b32d;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #678a23), color-stop(10%, #779f28), color-stop(65%, #86b32d), color-stop(100%, #88b52e));
-  background-image: linear-gradient(top, #678a23 0%, #779f28 10%, #86b32d 65%, #88b52e 100%);
+  color: #b0b0b0;
+  background-color: #fff;
+}
+
+/* line 36, ../src/widgets/_mixin.scss */
+.card3-shadow {
+  border-top: 1px solid black;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 -0.08em 0;
+}
+
+/* line 42, ../src/widgets/_mixin.scss */
+.card4-light {
+  font-size: 48px;
+  text-align: center;
+  padding: 100px;
+  background-color: #53751D;
+  color: #99d041;
+}
+
+/* line 48, ../src/widgets/_mixin.scss */
+.card4-dark {
+  font-size: 48px;
+  text-align: center;
+  padding: 100px;
+  background-color: #99d041;
+  color: #53751d;
+}
+
+/* line 54, ../src/widgets/_mixin.scss */
+.card5-light {
+  font-size: 48px;
+  text-align: center;
+  padding: 100px;
+  background-color: #53751D;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 -0.08em 0;
+}
+
+/* line 60, ../src/widgets/_mixin.scss */
+.card5-shadow {
+  font-size: 48px;
+  text-align: center;
+  padding: 100px;
+  background-color: #99d041;
+  text-shadow: rgba(255, 255, 255, 0.25) 0 0.08em 0;
 }
