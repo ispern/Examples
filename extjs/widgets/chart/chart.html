@@ -58,17 +58,10 @@ app = {
 				}, {
 					displayName:	'データ2',
 					yField:			'num2'
-                }],
-                listeners: {
-                   initialize: function() {
-                       //this.xAxis = xAxis;
-                       //this.yAxis = yAxis;
-                   }
-                }
+                }]
 			}]
 		};
-        var axis = org.xAxis;
-		
+
 		Ext.apply(org, cfg);
 		var pnl = new Ext.Panel(org);
 
