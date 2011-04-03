@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>TEST</title>
+    </head>
+<body>
+</body>
+<!-- Ext JS -->
+<link rel="stylesheet" type="text/css" href="http://extjs.cachefly.net/ext-3.2.1/resources/css/ext-all.css" />
+<script type="text/javascript" src="http://extjs.cachefly.net/ext-3.2.1/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="http://extjs.cachefly.net/ext-3.2.1/ext-all.js"></script>
+<script type="text/javascript" src="chart.js"></script>
+
+<!-- Ext JS Config -->
+<script type="text/javascript">
+Ext.BLANK_IMAGE_URL			= 'http://extjs.cachefly.net/ext-3.2.1/resources/images/default/s.gif';
+Ext.chart.Chart.CHART_URL	= 'http://extjs.cachefly.net/ext-3.2.1/resources/charts.swf';
+</script>
+
+<!-- Application -->
+<script type="text/javascript">
+app = {
+	chart: function(cfg) {
+		var st = new Ext.data.ArrayStore({
+			fields:		['_id', 'timestamp', 'num1', 'num2'],
+			data:		[
+				[1, new Date(2011, 3, 30, 19,  0, 0), 1000, 800],
+				[2, new Date(2011, 3, 30, 19,  5, 0), 1100, 800],
+				[3, new Date(2011, 3, 30, 19, 10, 0), 1200, 800],
+				[4, new Date(2011, 3, 30, 19, 15, 0), 1300, 800],
+				[5, new Date(2011, 3, 30, 19, 20, 0), 1200, 800],
+				[6, new Date(2011, 3, 30, 19, 25, 0), 1100, 800],
+				[7, new Date(2011, 3, 30, 19, 30, 0), 1100, 800]
+			]
+		});
+
+        var xAxis = new Ext.chart.TimeAxis({
+            majorUnit:		10,
+            labelRenderer : Ext.util.Format.dateRenderer('H:i')
+        });
+        var yAxis = new Ext.chart.NumericAxis({
+            majorUnit:		100,
+            labelRenderer : Ext.util.Format.numberRenderer('0,0')
+        });
+		var org = {
+			title:	'テストチャート',
+			items:	[{
+				xtype:	'linechart',
+				store:	st,
+				xField:	'timestamp',
+                ref: 'linechart',
+				xAxis: xAxis,
+				yAxis: yAxis,
+				series: [{
+					displayName:	'データ1',
+					yField:			'num1'
+				}, {
+					displayName:	'データ2',
+					yField:			'num2'
+                }],
+                listeners: {
+                   initialize: function() {
+                       //this.xAxis = xAxis;
+                       //this.yAxis = yAxis;
+                   }
+                }
+			}]
+		};
+        var axis = org.xAxis;
+		
+		Ext.apply(org, cfg);
+		var pnl = new Ext.Panel(org);
+
+		return pnl;
+	},
+
+	init: function() {
+		var me = this;
+
+        var chart = me.chart({
+            title:	'チャート'
+        });
+
+		var view = new Ext.Viewport({
+			layout:	'border',
+			items:	[{
+				region:		'north',
+				html:		'TEST'
+			}, {
+				region:		'center',
+				xtype:		'tabpanel',
+				activeTab:	0,
+				items:		[chart, {
+					title:	'ダミー',
+					html:	'ダミー'
+                }]
+			}]
+		});
+	}
+};
+
+Ext.onReady(function() {
+	app.init();	
+});
+</script>
+</html>
