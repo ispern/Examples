@@ -23,9 +23,84 @@ Ext.setup({
 });
 
 Ext.ns('App');
-Ext.regModel('Items', {
-    fields: ['item']
+
+var data = {
+    items: [{
+        name: 'record1',
+        child: [{
+            name: 'child1'
+        }]
+    },{
+        name: 'record2',
+        child: [{
+            name: 'child1'
+        }]
+    },{
+        name: 'record3',
+        child: [{
+            name: 'child1'
+        }]
+    },{
+        name: 'record4',
+        child: [{
+            name: 'child1'
+        }]
+    },{
+        name: 'record5',
+        child: [{
+            name: 'child1'
+        }]
+    },{
+        name: 'record6',
+        child: [{
+            name: 'child1'
+        }]
+    }]
+};
+
+Ext.regModel('Item', {
+
+    fields: ['name'],
+
+    hasMany: {
+        model: 'Child',
+
+        name: 'child'
+    }
 });
+
+Ext.regModel('Chidl', {
+
+    fields: [
+        'name'
+    ],
+
+    belongsTo: 'Item'
+});
+
+Ext.regStore('Items', {
+
+    model: 'Item',
+
+    type: 'json',
+
+    autoLoad: true,
+
+    data: data,
+
+    proxy: {
+
+        type: 'memory',
+
+        reader: {
+
+            type: 'json',
+
+            root: 'items'
+        }
+    }
+});
+
 App.DataView = Ext.extend(Ext.DataView, {
 
     itemSelector: 'div.item',
@@ -33,19 +108,22 @@ App.DataView = Ext.extend(Ext.DataView, {
     tpl: new Ext.XTemplate(
         '<tpl for=".">',
             '<div class="item" style="border: 1px solid black; height: 40px;">',
-                '{item}',
+                '{name}',
+                '<tpl for="child">',
+                    '<span>{name}</span>',
+                '</tpl>',
             '</div>',
         '</tpl>'),
 
     initComponent: function() {
+
         var me = this;
 
         // 設定適用
         Ext.apply(me, {
-            store: new Ext.data.ArrayStore({
-                model: 'Items',
-                expandData: true
-            })
+
+            store: 'Items'
+
         });
 
         // スーパークラスメソッドコール
@@ -53,13 +131,16 @@ App.DataView = Ext.extend(Ext.DataView, {
     },
 
     initEvents: function() {
+
         var me = this;
         
         // スーパークラスメソッドコール
         App.DataView.superclass.initEvents.call(me);
+    },
 
-        this.store.loadData(['11', '12', '13', '14', '15']);
-        
+    onItemSelect: function() {
+        console.log(this.store);
+        console.log(arguments);
     }
 });
 

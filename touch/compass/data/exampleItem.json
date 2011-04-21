@@ -1,7 +1,11 @@
 {
     "items": [{
-        "text": "mixin",
+        "text": "_mixins.scss",
         "type": "mixinpanel",
-        "leaf": "true"
+        "leaf": true
+    },{
+        "text": "_buttons.scss",
+        "type": "buttonpanel",
+        "leaf": true
     }]
 }

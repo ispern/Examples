@@ -4,13 +4,26 @@ Ext.StoreMgr.register(new Ext.data.TreeStore({
 
     model: 'ExampleItem',
 
-    autoLoad: true,
+    root: {
+        items: [{
+            text: "_mixins.scss",
+            type: "mixinpanel",
+            leaf: true
+        },{
+            text: "_buttons.scss",
+            type: "mixinpanel",
+            leaf: false,
+            items: [{
+                text: "_mixins.scss",
+                type: "mixinpanel",
+                leaf: true
+            }]
+        }]
+    },
 
     proxy: {
 
         type: 'ajax',
-
-        url: 'data/exampleItem.json',
 
         reader: {
 

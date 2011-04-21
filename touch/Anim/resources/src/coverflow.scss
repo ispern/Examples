@@ -1,0 +1,40 @@
+@import 'sencha-touch/default/all';
+
+.x-coverflow {
+    width: 100%;
+    height: 100%;
+
+    .x-coverflow-body {
+        
+        @include background-gradient(#484848, 'recessed');
+        @include display-box;
+        @include box-orient(horizontal);
+        @include box-align(center);
+        @include box-pack(center);
+
+        .x-coverflow-item {
+            width: 360px;
+            height: 442px;
+            position: absolute;
+            opacity: 1;
+            // -webkit-transform-style: preserve-3d;
+            // -webkit-transition-duration: 0.4s;
+            // -webkit-transition-timing-function: ease-out;
+
+            & > img {
+                position: absolute;
+                width: 360px;
+                height: 442px;
+            }
+
+            // &.x-coverflow-item-next {
+                // @include transform(0.8);
+            // }
+
+            // &.x-coverflow-item-prev {
+                // @include transform(0.8);
+            // }
+        }
+
+    }
+}

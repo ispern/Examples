@@ -1,0 +1,589 @@
+@charset "UTF-8";
+/* line 3, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_reset.scss */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3,
+h4, h5, h6, pre, code, form, fieldset, legend,
+input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 8, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 13, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_reset.scss */
+fieldset, img {
+  border: 0;
+}
+
+/* line 18, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_reset.scss */
+address, caption, cite, code,
+dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* line 23, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_reset.scss */
+li {
+  list-style: none;
+}
+
+/* line 27, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_reset.scss */
+caption, th {
+  text-align: left;
+}
+
+/* line 31, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_reset.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+/* line 37, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_reset.scss */
+q:before,
+q:after {
+  content: "";
+}
+
+/* line 41, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_reset.scss */
+abbr, acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+/* line 46, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_reset.scss */
+sup {
+  vertical-align: text-top;
+}
+
+/* line 50, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_reset.scss */
+sub {
+  vertical-align: text-bottom;
+}
+
+/* line 54, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_reset.scss */
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* line 60, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_reset.scss */
+*:focus {
+  outline: none;
+}
+
+/*$base-color: #647482 !default; // Graphite*/
+/* line 12, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+html, body {
+  font-family: "Helvetica Neue", HelveticaNeue, "Helvetica-Neue", Helvetica, "BBAlpha Sans", sans-serif;
+  font-weight: normal;
+  position: relative;
+}
+
+/* line 18, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -webkit-text-size-adjust: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* line 27, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-android input[type=checkbox], .x-android input[type=radio] {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+}
+/* line 31, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-android input, .x-android textarea {
+  -webkit-tap-highlight-color: black !important;
+}
+
+/* line 36, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+html, body, .x-body-stretcher {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 41, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-ios.x-tablet .x-landscape * {
+  -webkit-text-stroke: 1px transparent;
+}
+
+/*
+.x-ipad {
+  .x-container, .x-panel, .x-toolbar, .x-mask {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+*/
+/* line 53, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+body {
+  font-size: 104%;
+}
+
+/* line 57, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+body.x-android.x-phone {
+  font-size: 116%;
+}
+
+/* line 61, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+body.x-ios.x-phone {
+  font-size: 114%;
+}
+
+/* line 65, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+body.x-desktop {
+  font-size: 114%;
+}
+
+/* line 69, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+input, textarea {
+  -webkit-user-select: text;
+}
+
+/* line 73, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-hidden-visibility {
+  visibility: hidden !important;
+}
+
+/* line 77, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-hidden-display {
+  display: none !important;
+}
+
+/* line 81, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-hidden-offsets {
+  position: absolute !important;
+  left: -10000em;
+  top: -10000em;
+  visibility: hidden;
+}
+
+/* line 88, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-fullscreen {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+}
+
+/* line 94, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-desktop .x-body-stretcher {
+  margin-bottom: 0px;
+}
+
+/* line 98, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-scroller-parent {
+  overflow: hidden !important;
+}
+
+/* line 102, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-scroller-parent, .x-scroller {
+  position: relative;
+}
+
+/* line 106, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-draggable {
+  z-index: 1;
+}
+
+/* line 110, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-scrollbar {
+  position: absolute;
+  z-index: 10;
+  -webkit-transition-property: opacity;
+  -webkit-transition-duration: 250ms;
+  -webkit-border-radius: 4px;
+  opacity: 0;
+}
+
+/* line 119, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-android .x-scrollbar {
+  -webkit-transition-property: none;
+  -webkit-transition-duration: 0ms;
+  -webkit-border-radius: 0px;
+}
+
+/* line 125, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-scrollbar-dark {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* line 130, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-scrollbar-light {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* line 135, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-scrollbar-vertical {
+  top: 0;
+  right: 4px;
+  width: 4px;
+}
+
+/* line 141, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-scrollbar-horizontal {
+  left: 0;
+  bottom: 4px;
+  height: 4px;
+}
+
+/* line 147, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8000;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  -webkit-box-pack: center;
+  box-pack: center;
+  background: rgba(0, 0, 0, 0.3) center center no-repeat;
+}
+/* line 157, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-mask.x-mask-gray {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* line 161, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-mask .x-mask-loading {
+  display: -webkit-box;
+  display: box;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-align: center;
+  box-align: center;
+  -webkit-box-pack: center;
+  box-pack: center;
+  -webkit-border-radius: 0.5em;
+  border-radius: 0.5em;
+  color: #fff;
+  text-align: center;
+  padding: .4em;
+  font-weight: bold;
+  display: block;
+  width: 8.5em;
+  height: 8.5em;
+  background: rgba(0, 0, 0, 0.25);
+}
+/* line 177, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-mask .x-loading-msg {
+  font-size: .95em;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 -0.08em 0;
+}
+
+/* line 183, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-floating {
+  position: absolute !important;
+  z-index: 10000 !important;
+  top: 0;
+  left: 0;
+}
+
+/* line 190, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-dragging {
+  opacity: 0.7;
+}
+
+/* line 194, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-panel-list {
+  background-color: #bacfe8;
+}
+
+/* line 199, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-html {
+  -webkit-user-select: auto;
+  -webkit-touch-callout: inherit;
+  line-height: 1.5;
+  color: #333;
+  font-size: .8em;
+  padding: 1.2em;
+}
+/* line 39, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html body {
+  line-height: 1.5;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  color: #333333;
+  font-size: 75%;
+}
+/* line 65, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html h1, .x-html h2, .x-html h3, .x-html h4, .x-html h5, .x-html h6 {
+  font-weight: normal;
+  color: #222222;
+}
+/* line 66, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html h1 img, .x-html h2 img, .x-html h3 img, .x-html h4 img, .x-html h5 img, .x-html h6 img {
+  margin: 0;
+}
+/* line 67, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html h1 {
+  font-size: 3em;
+  line-height: 1;
+  margin-bottom: 0.50em;
+}
+/* line 68, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html h2 {
+  font-size: 2em;
+  margin-bottom: 0.75em;
+}
+/* line 69, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html h3 {
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 1.00em;
+}
+/* line 70, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html h4 {
+  font-size: 1.2em;
+  line-height: 1.25;
+  margin-bottom: 1.25em;
+}
+/* line 71, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html h5 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 1.50em;
+}
+/* line 72, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html h6 {
+  font-size: 1em;
+  font-weight: bold;
+}
+/* line 73, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html p {
+  margin: 0 0 1.5em;
+}
+/* line 74, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html p img.left {
+  display: inline;
+  float: left;
+  margin: 1.5em 1.5em 1.5em 0;
+  padding: 0;
+}
+/* line 75, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html p img.right {
+  display: inline;
+  float: right;
+  margin: 1.5em 0 1.5em 1.5em;
+  padding: 0;
+}
+/* line 77, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html a {
+  text-decoration: underline;
+  color: #000099;
+}
+/* line 18, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
+.x-html a:visited {
+  color: #000066;
+}
+/* line 21, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
+.x-html a:focus {
+  color: black;
+}
+/* line 24, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
+.x-html a:hover {
+  color: black;
+}
+/* line 27, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
+.x-html a:active {
+  color: #cc0099;
+}
+/* line 78, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html blockquote {
+  margin: 1.5em;
+  color: #666666;
+  font-style: italic;
+}
+/* line 79, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html strong {
+  font-weight: bold;
+}
+/* line 80, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html em {
+  font-style: italic;
+}
+/* line 81, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html dfn {
+  font-style: italic;
+  font-weight: bold;
+}
+/* line 82, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html sup, .x-html sub {
+  line-height: 0;
+}
+/* line 83, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html abbr, .x-html acronym {
+  border-bottom: 1px dotted #666666;
+}
+/* line 84, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html address {
+  margin: 0 0 1.5em;
+  font-style: italic;
+}
+/* line 85, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html del {
+  color: #666666;
+}
+/* line 86, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html pre {
+  margin: 1.5em 0;
+  white-space: pre;
+}
+/* line 87, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html pre, .x-html code, .x-html tt {
+  font: 1em "andale mono", "lucida console", monospace;
+  line-height: 1.5;
+}
+/* line 88, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html li ul, .x-html li ol {
+  margin: 0;
+}
+/* line 89, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html ul, .x-html ol {
+  margin: 0 1.5em 1.5em 0;
+  padding-left: 3.333em;
+}
+/* line 90, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html ul {
+  list-style-type: disc;
+}
+/* line 91, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html ol {
+  list-style-type: decimal;
+}
+/* line 92, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html dl {
+  margin: 0 0 1.5em 0;
+}
+/* line 93, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html dl dt {
+  font-weight: bold;
+}
+/* line 94, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html dd {
+  margin-left: 1.5em;
+}
+/* line 95, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html table {
+  margin-bottom: 1.4em;
+  width: 100%;
+}
+/* line 96, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html th {
+  font-weight: bold;
+}
+/* line 97, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html thead th {
+  background: #c3d9ff;
+}
+/* line 98, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html th, .x-html td, .x-html caption {
+  padding: 4px 10px 4px 5px;
+}
+/* line 99, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html tr.even td {
+  background: #e5ecf9;
+}
+/* line 100, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html tfoot {
+  font-style: italic;
+}
+/* line 101, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html caption {
+  background: #eeeeee;
+}
+/* line 102, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html .quiet {
+  color: #666666;
+}
+/* line 103, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.x-html .loud {
+  color: #111111;
+}
+/* line 209, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-html ul li {
+  list-style-type: circle;
+}
+/* line 212, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-html ol li {
+  list-style-type: decimal;
+}
+
+/* line 218, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-video {
+  background-color: #000;
+}
+
+/* line 222, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-sortable .x-dragging {
+  opacity: 1;
+  z-index: 5;
+}
+
+/* line 227, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-fullscreen {
+  background: #eeeeee;
+}
+
+/* line 1, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/widgets/_map.scss */
+.x-map {
+  background-color: #edeae2;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 7, ../../../../lib/touch/resources/themes/stylesheets/sencha-touch/default/widgets/_map.scss */
+.x-mask-map {
+  background: transparent !important;
+}
+
+/*$base-color: #647482 !default; // Graphite*/
+/*$base-color: #647482 !default; // Graphite*/
+/*$base-color: #647482 !default; // Graphite*/
+/*$base-color: #647482 !default; // Graphite*/
+/*$base-color: #647482 !default; // Graphite*/
+/*$base-color: #647482 !default; // Graphite*/
+/*$base-color: #647482 !default; // Graphite*/
+/*$base-color: #647482 !default; // Graphite*/
+/*$base-color: #647482 !default; // Graphite*/
+/*$base-color: #647482 !default; // Graphite*/
+/*$base-color: #647482 !default; // Graphite*/
+/*$base-color: #647482 !default; // Graphite*/
+/* line 3, ../src/coverflow.scss */
+.x-coverflow {
+  width: 100%;
+  height: 100%;
+}
+/* line 7, ../src/coverflow.scss */
+.x-coverflow .x-coverflow-body {
+  background-color: #484848;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #2f2f2f), color-stop(10%, #3b3b3b), color-stop(65%, #484848), color-stop(100%, #494949));
+  background-image: linear-gradient(top, #2f2f2f 0%, #3b3b3b 10%, #484848 65%, #494949 100%);
+  display: -webkit-box;
+  display: box;
+  -webkit-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-align: center;
+  box-align: center;
+  -webkit-box-pack: center;
+  box-pack: center;
+}
+/* line 15, ../src/coverflow.scss */
+.x-coverflow .x-coverflow-body .x-coverflow-item {
+  width: 360px;
+  height: 442px;
+  position: absolute;
+  opacity: 1;
+}
+/* line 24, ../src/coverflow.scss */
+.x-coverflow .x-coverflow-body .x-coverflow-item > img {
+  position: absolute;
+  width: 360px;
+  height: 442px;
+}

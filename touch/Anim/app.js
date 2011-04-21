@@ -14,8 +14,21 @@ Ext.regApplication({
     
     // タブレット用スタートアップ画像
     tabletStartupScreen: '',
-
+    
     launch: function() {
-        this.viewport = new App.Viewport();
+        new Ext.Panel({
+            layout: 'card',
+            fullscreen: true,
+            items: [{
+                xtype: 'ux-coverflow',
+                imageItems: [{
+                    url: 'screen1.jpg'
+                },{
+                    url: 'screen2.jpg'
+                },{
+                    url: 'screen3.jpg'
+                }]
+            }]
+        });
     }
 });
